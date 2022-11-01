@@ -1,2 +1,3 @@
-# rest-api-demo-frontend
-The frontend for consuming the REST APIs made in the rest-api-demo express application
+
+# graphql-api-demo-frontend
+The frontend for consuming the GraphQl APIs made in the graph-api-demo express application
