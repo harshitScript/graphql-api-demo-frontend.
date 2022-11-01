@@ -1,5 +1,5 @@
 {
-  "name": "rest-api-demo-frontend",
+  "name": "graphql-api-demo-frontend",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -35,7 +35,7 @@
     "standard": "^17.0.0",
     "vite": "^3.1.0"
   },
-  "description": "The frontend for consuming the REST APIs made in the rest-api-demo express application",
+  "description": "The frontend for consuming the GRAPHQL APIs made in the rest-api-demo express application",
   "main": "vite.config.js",
   "keywords": [
     "rest",
