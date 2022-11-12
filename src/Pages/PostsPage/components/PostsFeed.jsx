@@ -4,32 +4,15 @@ import styled from "styled-components";
 import Post from "../../../Components/UI/Post";
 import usePosts from "../../../hooks/usePosts";
 import { NavLink, useParams } from "react-router-dom";
-import { useEffect } from "react";
-import connectSocket from "socket.io-client";
-import toast from "react-hot-toast";
 
 const PostsFeed = ({ pagesCount }) => {
   const { page } = useParams();
 
-  const { posts, postsFetching, postsLoading, refetchPosts } = usePosts({
+  const { posts, postsFetching, postsLoading } = usePosts({
     page,
   });
 
   const isLoading = postsLoading || postsFetching;
-
-  useEffect(() => {
-    const socket = connectSocket(import.meta.env.VITE_BASE_URI);
-
-    socket.on("add-post", (data) => {
-      refetchPosts();
-      toast.success("A new post created by a client");
-    });
-
-    socket.on("delete-post", (data) => {
-      refetchPosts();
-      toast.success("A  post deleted by a client");
-    });
-  }, []);
 
   return isLoading ? (
     <Card1 className="w-3/6 mx-auto mt-10 h-40 grid place-items-center">

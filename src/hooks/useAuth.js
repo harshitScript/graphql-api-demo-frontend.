@@ -1,7 +1,7 @@
 const useAuth = () => {
   const setAuthData = ({ expiry, authToken, userId }) => {
     localStorage.setItem('authToken', authToken)
-    localStorage.setItem('expiry', expiry)
+    localStorage.setItem('expiry', +expiry)
     localStorage.setItem('userId', userId)
   }
 
