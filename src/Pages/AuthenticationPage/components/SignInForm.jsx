@@ -42,7 +42,7 @@ const SignInForm = () => {
           },
         });
       } else {
-        setAuthData(res?.data);
+        setAuthData(res?.data?.data?.loginUser);
 
         window.location.pathname = "/posts/1";
       }
